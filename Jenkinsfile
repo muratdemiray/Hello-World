@@ -8,8 +8,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh '. ./build-docker-test-image.sh'
-                sh 'docker image ls'
+                bat '. ./build-docker-test-image.sh'
+                bat 'docker image ls'
             }
         }
         stage('Test') {
