@@ -15,6 +15,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo 'Running...' 
+                bat 'export KUBECONFIG=C:\Users\mdemiray\.kube\config'
                 bat 'helm install  flaskapp helm-app/' 
                 echo 'http://localhost'       
 
