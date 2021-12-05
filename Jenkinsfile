@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 bat 'docker build --force-rm -t "hello-world:test" .'
-                sh 'docker image ls'
+                bat 'docker image ls'
             }
         }
         stage('Test') {
