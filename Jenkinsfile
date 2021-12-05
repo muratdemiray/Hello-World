@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh './scripts/build-docker-test-image.sh'
+                sh 'docker build --force-rm -t "hello-world:test" .'
                 sh 'docker image ls'
             }
         }
