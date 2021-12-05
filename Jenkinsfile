@@ -12,9 +12,11 @@ pipeline {
                 bat 'docker image ls'
             }
         }
-        stage('Test') {
+        stage('Run') {
             steps {
-                echo 'Testing...'         
+                echo 'Running...' 
+                bat 'helm upgrade --install  flaskapp helm-app/' 
+                echo 'http://localhost'       
 
             }
         }
