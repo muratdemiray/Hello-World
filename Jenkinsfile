@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                bat './build-docker-test-image.sh'
+                bat 'build-docker-test-image.sh'
                 bat 'docker image ls'
             }
         }
