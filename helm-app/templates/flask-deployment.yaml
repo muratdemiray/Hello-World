@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-deploy
+  labels:
+    app: flask-deploy
+spec:
+  replicas: {{ .Values.app.flaskreplicaCount}}
+  selector:
+    matchLabels:
+      app: flask-web
+  template:
+    metadata:
+      labels:
+        app: flask-web
+    spec:
+      containers:
+      - name: flask-web
+        image: {{ .Values.app.imagename}}
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: "100m"
+          requests:
+            cpu: "100m"
+        ports:
+        - containerPort: 3000

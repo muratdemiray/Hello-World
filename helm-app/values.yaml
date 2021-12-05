@@ -1,0 +1,5 @@
+#Flask app values.
+app:
+  flaskreplicaCount: 1
+  imagename: hello-world:latest
+
