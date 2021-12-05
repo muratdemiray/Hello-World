@@ -1,1 +1,1 @@
-docker build --force-rm -t "hello-world:dev" ../
+docker build --force-rm -t "hello-world:test" .
