@@ -17,7 +17,7 @@ spec:
       containers:
       - name: flask-web
         image: {{ .Values.app.imagename}}
-        imagePullPolicy: Always
+        imagePullPolicy: Never
         resources:
           limits:
             cpu: "100m"
