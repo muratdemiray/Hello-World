@@ -1,5 +1,5 @@
 #Flask app values.
 app:
   flaskreplicaCount: 1
-  imagename: hello-world:test
+  imagename: hello-world:latest
 
