@@ -14,8 +14,9 @@ pipeline {
         }
         stage('Run') {
             steps {
-                echo 'Running...'              
-                bat 'helm upgrade --install  flaskapp helm-app/' 
+                echo 'Running...'  
+                bat 'helm uninstall  flaskapp'     
+                bat 'helm install  flaskapp helm-app/' 
                 echo 'http://localhost'       
 
             }

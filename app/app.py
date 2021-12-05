@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, time
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, Murat!</p>"
+    return "<p>Hello, Murat!<br> Repo Updated time is :"+time.strftime('%A %B, %d %Y %H:%M:%S')+"</p>"
 
 if __name__== '__main__':    
     #app.run(debug=True)
