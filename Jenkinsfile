@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Deploying...'  
               //  bat 'helm uninstall  flaskapp'     
-                bat 'helm install  flaskapp helm-app/' 
+                bat 'helm install --replace flaskapp helm-app/' 
                 echo 'http://localhost'       
 
             }
