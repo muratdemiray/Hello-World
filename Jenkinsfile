@@ -22,6 +22,7 @@ pipeline {
 
                 // push image
                 customImage.push()
+                }
             }
         }
         stage('Run') {
