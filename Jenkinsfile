@@ -18,7 +18,7 @@ pipeline {
                 docker.withRegistry('https://106447319060.dkr.ecr.eu-central-1.amazonaws.com', 'ecr:eu-central-1:7c87d4ce-424d-425e-ada8-9e4f45ed5ac3') {
 
                 // build image
-                def customImage = docker.build("my-image:${env.BUILD_ID}")
+                def customImage = docker.build("hello-world:${env.BUILD_ID}")
 
                 // push image
                 customImage.push()
