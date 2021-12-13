@@ -1,5 +1,5 @@
 #Flask app values.
 app:
   flaskreplicaCount: 1
-  imagename: hello-world:latest
+  imagename: 106447319060.dkr.ecr.eu-central-1.amazonaws.com/hello-world:latest
 
