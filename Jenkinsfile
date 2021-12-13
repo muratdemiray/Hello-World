@@ -29,7 +29,7 @@ pipeline {
                 echo 'Deploying...'  
               //  bat 'helm uninstall  flaskapp'     
                 bat 'helm upgrade --install flaskapp helm-app/' 
-                echo 'http://localhost'       
+                echo 'http://localhost'        
 
             }
         }
