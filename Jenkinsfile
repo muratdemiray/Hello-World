@@ -8,8 +8,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                bat "docker build --force-rm -t hello-world:${env.BUILD_ID} ."
-                bat 'docker image ls'
+                sh "docker build --force-rm -t hello-world:${env.BUILD_ID} ."
+                sh 'docker image ls'
             }
         }
         stage('Publish'){
